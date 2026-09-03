@@ -1,4 +1,4 @@
-# Wazuh SIEM Endpoint Security Monitoring
+# SIEM Deployment & SOC Automation Pipeline (Wazuh, TheHive, Shuffle)
 
 ## Overview
 This project demonstrates a Wazuh SIEM home lab built for hands-on SOC Analyst training. It showcases endpoint security monitoring, log analysis, File Integrity Monitoring (FIM), vulnerability detection, custom rule creation, and brute-force attack detection using a Windows endpoint and Ubuntu-based Wazuh Manager. The lab simulates real-world security events to practice alert validation, investigation, and threat detection.
