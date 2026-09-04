@@ -78,6 +78,17 @@ Webhook  →  SHA256 Hash Extraction  →  VirusTotal v3 Lookup  →  TheHive Al
 ## Automated Incident Response Backend: TheHive + Cassandra + Elasticsearch
 TheHive was deployed on Ubuntu with Cassandra as the graph database (via JanusGraph) and Elasticsearch as the search/index engine, all configured to communicate over plain HTTP on the local network.
 **What is changed in all the configuration files**
+
+```hocon
+# Wazuh manager sudo nano /etc/ossec/ossec.conf
+# Wazuh rule (local_rules.xml)
+<integration>
+    <name>shuffle</name>
+    <hook_url>https://shuffler.io/api/v1/hooks/webhook_fb88c0c7-e859-41ca-8998-21af4e503539</hook_url>
+    <rule_id>10002</rule_id>
+    <alert_format>json</alert_format>
+</integration>
+```
 ```hocon
 # sudo nano /etc/thehive/application.conf
 db.janusgraph {
